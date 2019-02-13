@@ -1,11 +1,15 @@
 package com.retail.demo.domain;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.retail.demo.domain.bill.Bill;
 import com.retail.demo.domain.user.User;
 
 public class DiscountCalculation {
 
+    @JsonProperty
     private User user = null;
+    
+    @JsonProperty
     private Bill bill = null;
     
     public DiscountCalculation() {

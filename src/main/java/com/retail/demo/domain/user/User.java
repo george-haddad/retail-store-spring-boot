@@ -1,6 +1,6 @@
 package com.retail.demo.domain.user;
 
-import java.util.Date;
+import java.time.LocalDate;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class User {
@@ -25,27 +25,28 @@ public class User {
      * </ul>
      */
     @JsonProperty
-    private String type = null;
+    private UserType type = null;
     
     @JsonProperty
-    private Date joinDate = null;
+    private LocalDate joinDate = null;
     
     public User() {
         
     }
     
-    public User(Long id, String username, String firstName, String lastName) {
+    public User(Long id, String username, String firstName, String lastName, UserType type) {
         this.id = id;
         this.username = username;
         this.firstName = firstName;
         this.lastName = lastName;
+        this.type = type;
     }
     
-    public final String getType() {
+    public final UserType getType() {
         return type;
     }
     
-    public final void setType(String type) {
+    public final void setType(UserType type) {
         this.type = type;
     }
 
@@ -81,11 +82,11 @@ public class User {
         this.lastName = lastName;
     }
     
-    public final Date getJoinDate() {
+    public final LocalDate getJoinDate() {
         return joinDate;
     }
     
-    public final void setJoinDate(Date joinDate) {
+    public final void setJoinDate(LocalDate joinDate) {
         this.joinDate = joinDate;
     }
     

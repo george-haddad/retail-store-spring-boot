@@ -30,9 +30,7 @@ public class DemoApplication {
 
     @SuppressWarnings("deprecation")
     private ApiInfo generateApiInfo() {
-        return new ApiInfo(
-                           "retail demo server", "", "Version 1.0",
-                           "urn:tos", "hello@retail-demo.com", "Unlicense", "https://tldrlegal.com/license/unlicense");
+        return new ApiInfo("retail demo server", "", "Version 1.0","urn:tos", "hello@retail-demo.com", "Unlicense", "https://tldrlegal.com/license/unlicense");
     }
 }
 
