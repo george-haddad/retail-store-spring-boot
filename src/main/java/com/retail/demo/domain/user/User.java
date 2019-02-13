@@ -34,12 +34,13 @@ public class User {
         
     }
     
-    public User(Long id, String username, String firstName, String lastName, UserType type) {
+    public User(Long id, String username, String firstName, String lastName, UserType type, LocalDate joinDate) {
         this.id = id;
         this.username = username;
         this.firstName = firstName;
         this.lastName = lastName;
         this.type = type;
+        this.joinDate = joinDate;
     }
     
     public final UserType getType() {
