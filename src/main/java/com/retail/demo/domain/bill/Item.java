@@ -15,15 +15,25 @@ public class Item {
     @NotNull(message = "name can not be null")
     private String name = null;
     
+    /**
+     * <ul>
+     *  <li>GROCERY</li>
+     *  <li>CLEANING</li>
+     *  <li>CLOTHING</li>
+     *  <li>HARDWARE</li>
+     *  <li>COMPUTER</li>
+     *  <li>STATIONARY</li>
+     * </ul>
+     */
     @JsonProperty
     @NotNull(message = "type can not be null")
-    private String type = null;
+    private ItemType type = null;
 
     public Item() {
 
     }
     
-    public Item(Double price, String name, String type) {
+    public Item(Double price, String name, ItemType type) {
         this.price = price;
         this.name = name;
         this.type = type;
@@ -45,11 +55,11 @@ public class Item {
         this.name = name;
     }
 
-    public final String getType() {
+    public final ItemType getType() {
         return type;
     }
 
-    public final void setType(String type) {
+    public final void setType(ItemType type) {
         this.type = type;
     }
 
