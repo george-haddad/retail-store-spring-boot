@@ -23,7 +23,11 @@ public class DiscountEngine {
      * @param type - the item type or null for all items
      * @return total of all items of a particular {@link ItemType}
      */
-    public final double calculateTotal(List<Item> items, ItemType type) {
+    public final double calculateTotal(List<Item> items, ItemType type) throws NullPointerException {
+        if(items == null) {
+            throw new NullPointerException("items cannot be null");
+        }
+        
         double total = 0.0;
         for(Item item : items) {
             if(type == null) {
@@ -39,7 +43,18 @@ public class DiscountEngine {
         return total;
     }
     
-    public final double calculateDiscount(double amount, double discount) {
+    /**
+     * Performs a simple discount calculation of the <code>amount</code>
+     * 
+     * @param amount - the amount to discount from
+     * @param discount - the percentage to discount
+     * @return the discounted amount
+     */
+    public final double calculateDiscount(double amount, double discount) throws IllegalArgumentException {
+        if(discount > 1.0) {
+            throw new IllegalArgumentException("discount cannot be more than 1.0");
+        }
+        
         double x = amount * discount;
         return amount - x;
     }
@@ -51,7 +66,11 @@ public class DiscountEngine {
      * @param user - the user
      * @return the specific discount based on {@link UserType}
      */
-    public final double getUserSpecificDiscount(User user) {
+    public final double getUserSpecificDiscount(User user) throws NullPointerException {
+        if(user == null) {
+            throw new NullPointerException("user cannot be null");
+        }
+        
         UserType type = user.getType();
         double discount = 0;
         
