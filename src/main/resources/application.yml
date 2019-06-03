@@ -1,0 +1,12 @@
+spring:
+  main:
+    banner-mode: "off"
+  application:
+    name: retail-demo
+server:
+  port: 8080
+logging:
+  level:
+    root: INFO
+    org.springframework.web: ERROR
+    com.retail.demo: INFO
