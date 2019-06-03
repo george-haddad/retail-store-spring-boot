@@ -23,6 +23,7 @@
 		<java.version>1.8</java.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<fabric8.io-version>0.27.2</fabric8.io-version>
 	</properties>
 
 	<dependencies>
