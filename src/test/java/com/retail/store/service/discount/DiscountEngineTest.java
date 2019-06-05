@@ -1,4 +1,4 @@
-package com.retail.demo.service.discount;
+package com.retail.store.service.discount;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -7,10 +7,10 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import org.junit.Test;
-import com.retail.demo.domain.bill.Item;
-import com.retail.demo.domain.bill.ItemType;
-import com.retail.demo.domain.user.User;
-import com.retail.demo.domain.user.UserType;
+import com.retail.store.domain.bill.Item;
+import com.retail.store.domain.bill.ItemType;
+import com.retail.store.domain.user.User;
+import com.retail.store.domain.user.UserType;
 
 
 public class DiscountEngineTest {

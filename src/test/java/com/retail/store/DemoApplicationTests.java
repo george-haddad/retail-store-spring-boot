@@ -1,4 +1,4 @@
-package com.retail.demo;
+package com.retail.store;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
