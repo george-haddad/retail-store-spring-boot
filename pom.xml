@@ -113,6 +113,31 @@
                     </execution>
                 </executions>
             </plugin>
+            
+            <plugin>
+                <groupId>io.fabric8</groupId>
+                <artifactId>docker-maven-plugin</artifactId>
+                <version>${fabric8.io-version}</version>
+                <configuration>
+                    <images>
+                        <image>
+                            <name>retail-store-spring-boot:latest</name>
+                            <alias>dockerfile</alias>
+                            <build>
+                                <dockerFileDir>${project.basedir}</dockerFileDir>
+                                <assembly>
+                                    <descriptorRef>artifact-with-dependencies</descriptorRef>
+                                </assembly>
+                            </build>
+                            <run>
+                                <ports>
+                                    <port>8080:8080</port>
+                                </ports>
+                            </run>
+                        </image>
+                    </images>
+                </configuration>
+            </plugin>
 			
 		</plugins>
 	</build>
