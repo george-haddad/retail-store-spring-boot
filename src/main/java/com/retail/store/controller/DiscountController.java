@@ -1,4 +1,4 @@
-package com.retail.demo.controller;
+package com.retail.store.controller;
 
 import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,10 +8,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
-import com.retail.demo.domain.DiscountCalculation;
-import com.retail.demo.domain.bill.Bill;
-import com.retail.demo.domain.user.User;
-import com.retail.demo.service.discount.DiscountService;
+import com.retail.store.domain.DiscountCalculation;
+import com.retail.store.domain.bill.Bill;
+import com.retail.store.domain.user.User;
+import com.retail.store.service.discount.DiscountService;
 
 @RequestMapping("discounts")
 @RestController
@@ -23,7 +23,7 @@ public class DiscountController {
     public DiscountController(DiscountService discountService) {
         this.discountService = discountService;
     }
-    
+
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public Double createDiscount(@Valid @RequestBody DiscountCalculation discCalc) {
